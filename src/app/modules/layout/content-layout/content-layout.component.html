@@ -1,0 +1,19 @@
+<div class="layout-container">
+  <header class="layout-header">
+    <h1>XpertGroup</h1>
+    <nav>
+      <a routerLink="/cats">Breed List</a>
+      <a routerLink="/cats/list">Filter</a>
+      <a routerLink="/profile">Profile</a>
+      <a (click)="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main class="layout-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="layout-footer">
+    <p>&copy; 2024 My App. All rights reserved.</p>
+  </footer>
+</div>
