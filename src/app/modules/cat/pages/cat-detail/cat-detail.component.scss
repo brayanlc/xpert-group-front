@@ -1,0 +1,59 @@
+.breed-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.breed-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.breed-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.breed-detail {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.breed-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.breed-attributes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.attribute {
+  text-align: center;
+}
+
+.attribute-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.attribute-label {
+  font-size: 0.9rem;
+  color: #777;
+}

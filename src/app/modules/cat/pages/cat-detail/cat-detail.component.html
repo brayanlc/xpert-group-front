@@ -1,0 +1,33 @@
+@if (breed$ | async; as breed) {
+  <div class="breed-info-container">
+    <div class="breed-name">{{ breed?.name }}</div>
+    <img [src]="'breed?.image'" [alt]="breed?.name" class="breed-image" />
+
+    <div class="breed-detail">
+      <span class="breed-label">Origin:</span> {{ breed?.origin }}
+    </div>
+
+    <div class="breed-detail">
+      <span class="breed-label">Temperament:</span> {{ breed?.temperament }}
+    </div>
+
+    <div class="breed-detail">
+      <span class="breed-label">Life Span:</span> {{ breed?.life_span }} years
+    </div>
+
+    <div class="breed-attributes">
+      <div class="attribute">
+        <div class="attribute-value">{{ breed?.energy_level }}</div>
+        <div class="attribute-label">Energy Level</div>
+      </div>
+      <div class="attribute">
+        <div class="attribute-value">{{ breed?.child_friendly }}</div>
+        <div class="attribute-label">Child Friendly</div>
+      </div>
+      <div class="attribute">
+        <div class="attribute-value">{{ breed?.dog_friendly }}</div>
+        <div class="attribute-label">Dog Friendly</div>
+      </div>
+    </div>
+  </div>
+}
