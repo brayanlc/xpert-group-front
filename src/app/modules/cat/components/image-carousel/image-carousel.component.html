@@ -1,0 +1,11 @@
+<div class="carousel-container">
+  @for (image of images; track image.id) {
+    <img
+      [ngSrc]="image.url"
+      [width]="image.width"
+      [height]="image.height"
+      alt="Cat Image"
+      class="carousel-image"
+    />
+  }
+</div>
