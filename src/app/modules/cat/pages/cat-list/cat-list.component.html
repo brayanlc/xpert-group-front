@@ -1,0 +1,23 @@
+<select [formControl]="selectBreedForm" class="breed-select">
+  <option value="">Select a breed</option>
+  @for (breed of breeds; track breed.id; let idx = $index, e = $even) {
+    <option value="{{ breed.id }}">{{ breed.name }}</option>
+  }
+</select>
+
+@if (breed) {
+  <li class="breed-list-item">
+    <div class="breed-info">
+      <div class="breed-name">{{ breed.name }}</div>
+      <div class="breed-origin">Origin: {{ breed.origin }}</div>
+      <div class="breed-temperament">Temperament: {{ breed.temperament }}</div>
+    </div>
+    <a class="details-button" [routerLink]="['/cats', breed.id]">
+      View Details
+    </a>
+  </li>
+}
+
+@if (catImage$ | async; as images) {
+  <app-cat-image-carousel [images]="images"></app-cat-image-carousel>
+}
