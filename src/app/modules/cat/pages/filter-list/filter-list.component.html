@@ -1,0 +1,32 @@
+<div class="filter-container">
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search breeds..."
+    class="search-input"
+  />
+  <button (click)="filterBreeds()" class="search-button">Search</button>
+</div>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Breed Name</th>
+        <th>Origin</th>
+        <th>Temperament</th>
+        <th>Life Span (years)</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (breed of breedsFiltered; track breed) {
+        <tr [routerLink]="['/cats', breed.id]">
+          <td>{{ breed.name }}</td>
+          <td>{{ breed.origin }}</td>
+          <td>{{ breed.temperament }}</td>
+          <td>{{ breed.life_span }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
